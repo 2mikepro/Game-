@@ -1,0 +1,54 @@
+<style type="text/css">
+
+  .Witcher-image {
+    width: 300px;
+    height: 300px;
+  }
+  
+</style>
+
+</head>
+<body>
+
+<h1>Number to Guess: <span id="number-to-guess"></span></h1>
+<!-- you would add about 3-4 for more divs but when I did that I broke my game so I am just sticking with 1 -->
+<!-- I'm gonna keep trying to fix it's bugs when I add more -->
+<div id="Witcher">
+
+  <img class="Witcher-image" src="https://lh3.googleusercontent.com/IqokQfQbLpYn9oUaCOfmWZfbPoqM2HW7-whaSVefpSXP6nsiyqx-JQnzsj5f7Phs_vFcpT_GGoMV9LpHqMlidzh_jxMPnjnGx-KQTO0FMPAasPuP4urEyndBzY3brRAlCrZY-yux0239h9pLo1yXQNTux27Dikx6tjHyUHyFjvYAXhEqzcvIBPEruhEA0qA8u5QWV5v-VvtvxxXa4hG9MLpXIONxRN_4tFgsKGRjKN5ouv8vXG9rS9rBDO6P_Pz-rJNJxVjxu5youNWOWQDY9_YAM8a_BGc-vfr6ccRbG89DR5NLAWBwMfQLKDvMLY5FZsHWXVOm4lOgYX8O2qRCphwte7qXSl-yIGuGn1PsrSumidpAfoy8s5z9WMeTwzeGwzlaBSQ_7O6NqqKDDi2vHGGP82Ji-3TudmECTCkR_CciUB_U5GK0B9OxAUyEt_NVoFao-MHACCIr0tWqSaM3BnFLxhWPHHZC80Ogsf7BHtnT19gyKR8qRyEPDH5WZly9QSQfqQVjGkbIcZfjRP0pPDsfQxZXKrgGzsz0PbRa3J37TE5-SPe_or8nwhcfRKsSCyYMhHhP8xD7H1Bh4WLgUdnTSVUAO4vlXbgIyV8=w1334-h750-no" alt="crystals">
+
+</div>
+
+<!-- JAVASCRIPT  -->
+<!-- what I want here is the same cdn used in the examples you showed in the demos-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+var targetNumber = 120;
+
+$("#number-to-guess").text(targetNumber);
+// onclick and just repeat like 5 times
+var counter = 0;
+$(".Witcher-image").on("click", function() {
+
+  counter += 10;
+
+
+  alert("New score: " + counter);
+
+  if (counter === targetNumber) {
+
+    alert("You win!");
+  }
+
+  // the if else...
+  else if (counter >= targetNumber) {
+
+    // obviously they lost .
+    alert("You lose!!");
+  }
+});
+</script>
+</body>
+</html>
